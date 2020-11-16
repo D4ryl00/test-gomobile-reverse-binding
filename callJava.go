@@ -1,5 +1,9 @@
 package goTest
 
-func CallJava() {
-	hello.hello()
+type Hello interface {
+	SayHello()
+}
+
+func CallJava(h Hello) {
+	h.SayHello()
 }
